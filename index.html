@@ -2739,219 +2739,22 @@ const TOPICS = [
 //  Goethe-Zertifikat A2 specification.
 // ═══════════════════════════════════════════════════════════════════════
 //
-//  TEST 1: Goethe-Institut official Modellsatz Erwachsene
-//          © Goethe-Institut e.V. 2016/2021. Used with attribution per
-//          Goethe-Institut's free public Modellsatz licensing for teachers
-//          and learners worldwide. Source: goethe.de/a2
+//  Both tests are original GIRI-authored A2 practice tests, written for
+//          learners in Kathmandu, in the same format as the exam.
+//          No third-party exam material is included.
 //
-//  TESTS 2 & 3: Original GIRI-authored A2 practice tests, written for
-//          students at Gayatri Interdisciplinary Research Institute,
-//          Kathmandu, in the same format as the official exam.
-//
-//  Audio file for Test 1 Hören: 'GZ-A2-Modellsatz.mp3' (must be uploaded
-//  alongside index.html in the same GitHub repo). Single 16-min file
-//  containing all 4 Teile of the official Goethe Modellsatz Hören.
-//
-//  Tests 2 & 3 use no audio (transcript-only mode for now).
+//  Tests use no audio (transcript-only mode for now). For the official
+//  model test, learners are linked to the publisher's own website.
 // ═══════════════════════════════════════════════════════════════════════
 
 const MODELTESTS = [
-  {
-    id: 'mt1',
-    title: 'Modelltest 1',
-    subtitle: 'Goethe-Institut Modellsatz Erwachsene',
-    source: 'goethe',
-    sourceCredit: 'Goethe-Institut e.V. (offizieller Modellsatz)',
-    sourceURL: 'https://www.goethe.de/de/spr/kup/prf/prf/gza2/inf.html',
-    audioFile: 'GZ-A2-Modellsatz.mp3',
-    audioMarkers: [
-      { teil: 1, label: 'Teil 1 — 5 kurze Texte (zweimal)', start: 0 },
-      { teil: 2, label: 'Teil 2 — Gespräch (einmal)', start: 407 },
-      { teil: 3, label: 'Teil 3 — 5 Gespräche (einmal)', start: 600 },
-      { teil: 4, label: 'Teil 4 — Interview (zweimal)', start: 760 },
-    ],
-    lesen: [
-      // Teil 1 — Stefan Berger article (5 MC questions)
-      {
-        teil: 1,
-        instruction: 'Sie lesen in einer Zeitung diesen Text. Wählen Sie für die Aufgaben 1 bis 5 die richtige Lösung a, b oder c.',
-        text: `<div style="text-align:center;font-style:italic;color:var(--muted);margin-bottom:0.6rem">Der TV-Koch Stefan Berger</div>
-<h4 style="text-align:center;font-family:'Fraunces',serif;font-style:italic;margin-bottom:1rem">»Ich versuche immer wieder etwas Neues.«</h4>
-<p>Bei Stefan Berger gibt es Gerichte, von denen man vorher noch nie gehört hat. Er hat dauernd neue Ideen. Den Gästen gefällt das. Man muss unbedingt vorher anrufen und einen der wenigen Tische bestellen, wenn man in seinem Restaurant „Bremer Lokal" essen möchte. Er hat viele Gäste, will aber kein zweites Lokal aufmachen. „Klar, ich könnte vielleicht reich damit werden, aber ich habe mich bewusst dagegen entschieden. Ich mag es einfach, wie wir hier arbeiten."</p>
-<p>Stefan Berger wurde 1968 im Rheinland geboren, war auf der Realschule und lernte dann in einem großen Hotel kochen.</p>
-<p>Nach der Berufsausbildung brauchte er erstmal eine zweijährige Pause. Er fuhr durch die Welt, hatte verschiedene Jobs und lernte viel Neues kennen. Wegen einer Frau kam er dann nach Bremen. Das „Bremer Lokal" in seiner Nachbarschaft suchte einen Koch, Berger nahm die Stelle an, und drei Jahre später kaufte er das Restaurant.</p>
-<p>Die meisten kennen ihn aber erst durch seine Fernsehshow „Berger kocht". In der beliebten Sendung besuchen ihn Sänger und Schauspieler und kochen mit ihm ihre Lieblingsrezepte.</p>`,
-        questions: [
-          { n: 1, text: 'Die Gäste im „Bremer Lokal"…', choices: ['finden immer einen Tisch.', 'müssen anrufen und Essen bestellen.', 'sollen Plätze reservieren.'], answer: 2 },
-          { n: 2, text: 'Stefan Berger möchte…', choices: ['ein neues Restaurant eröffnen.', 'mit seinem Restaurant mehr Geld verdienen.', 'nur ein Restaurant haben.'], answer: 2 },
-          { n: 3, text: 'Sofort nach der Ausbildung…', choices: ['arbeitete er in einem großen Hotel.', 'kaufte er ein Restaurant.', 'machte er eine lange Reise.'], answer: 2 },
-          { n: 4, text: 'Stefan Berger ist bekannt durch…', choices: ['eine Fernsehsendung.', 'Lieder und Filme.', 'sein Restaurant.'], answer: 0 },
-          { n: 5, text: 'Dieser Text informiert über…', choices: ['den Berufsweg eines Kochs.', 'einen Koch in einem Hotel.', 'eine neue Berufsausbildung.'], answer: 0 },
-        ]
-      },
-      // Teil 2 — Kaufhaus Alexa info board (5 matching MC)
-      {
-        teil: 2,
-        instruction: 'Sie lesen die Informationstafel in einem Kaufhaus. In welchen Stock gehen Sie? Wählen Sie a, b oder c.',
-        text: `<div style="background:#fff;border:1px solid var(--line);padding:1rem;font-size:0.92rem;line-height:1.5">
-<div style="text-align:center;font-weight:700;margin-bottom:0.8rem;font-size:1.05rem">Kaufhaus Alexa</div>
-<table style="width:100%;border-collapse:collapse">
-<tr><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line);vertical-align:top;width:90px;font-weight:600">4. Stock</td><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line)">Bücher, Geschenke, Spielsachen, Freizeittaschen, Koffer, Brieftaschen und Geldbeutel, Café, Friseur- und Nagelstudio, Kunden-WC, Telefon</td></tr>
-<tr><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line);vertical-align:top;font-weight:600">3. Stock</td><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line)">Handys, Telefone, MP3-Player, CD-Player, DVD-Player, Radios, Fernseher, Computer, Notebooks, Tablets, Software, Drucker, CDs, DVDs, Videospiele, Sportkleidung, Arbeitskleidung</td></tr>
-<tr><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line);vertical-align:top;font-weight:600">2. Stock</td><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line)">Herrenmode, Nachtwäsche für ihn, Unterwäsche für ihn, Möbel für Wohnzimmer, Bad und Küche, Teppiche, Lampen, Gardinen, Kissen, Decken, Stoffe und Dekoartikel, Handtücher</td></tr>
-<tr><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line);vertical-align:top;font-weight:600">1. Stock</td><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line)">Damenmode, Nachtwäsche für sie, Unterwäsche für sie, Mode für Kinder und Jugendliche, Babybekleidung, Kinderwagen, Schuhe, Geschirr und Gläser, Besteck, Töpfe und Pfannen, Grills</td></tr>
-<tr><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line);vertical-align:top;font-weight:600">EG</td><td style="padding:0.5rem 0.4rem;border-bottom:1px solid var(--line)">Information, Uhren, Schmuck, Parfüm, Kosmetik, Schreibwaren, Glückwunschkarten, Kalender, Schultaschen, Reiseführer, Souvenirs, Schuhwerkstatt, Schlüsseldienst, Blumenladen</td></tr>
-<tr><td style="padding:0.5rem 0.4rem;vertical-align:top;font-weight:600">UG</td><td style="padding:0.5rem 0.4rem">Bäcker, Supermarkt, Putz- und Waschmittel, Fotoservice, Tabak, Zeitschriften und Zeitungen, Theater- und Konzertkarten, Reisebüro, Geldautomat, Kunden-WC</td></tr>
-</table></div>`,
-        questions: [
-          { n: 6, text: 'Sie möchten einer Freundin Rosen schenken.', choices: ['1. Stock', '4. Stock', 'anderer Stock'], answer: 2 },
-          { n: 7, text: 'Sie möchten Ihre Urlaubsbilder drucken lassen.', choices: ['3. Stock', 'UG', 'anderer Stock'], answer: 1 },
-          { n: 8, text: 'Sie möchten einen Tee trinken gehen.', choices: ['2. Stock', 'UG', 'anderer Stock'], answer: 2 },
-          { n: 9, text: 'Sie wollen Ihre Schuhe reparieren lassen.', choices: ['1. Stock', 'EG', 'anderer Stock'], answer: 1 },
-          { n: 10, text: 'Sie suchen eine Laufhose für Ihren Bruder zum Geburtstag.', choices: ['3. Stock', '2. Stock', 'anderer Stock'], answer: 0 },
-        ]
-      },
-      // Teil 3 — Gülcan's email from Hamburg (5 MC)
-      {
-        teil: 3,
-        instruction: 'Sie lesen eine E-Mail. Wählen Sie für die Aufgaben 11 bis 15 die richtige Lösung a, b oder c.',
-        text: `<div style="background:#fff;border:1px solid var(--line);padding:1rem;font-family:'Fraunces',serif;line-height:1.6">
-<p>Liebe Sonja,</p>
-<p>ich bin jetzt schon vier Wochen in Hamburg und bin noch dabei, mich hier einzuleben. An der Universität ist vieles ganz anders organisiert als zu Hause. Und auch im täglichen Leben musste ich erst einmal lernen, wie einige Dinge hier gemacht werden. Zum Beispiel, wie ich ein Zimmer finde und wo ich was einkaufen kann.</p>
-<p>In der ersten Woche haben ein paar Studenten eine Willkommensführung für uns ausländische Studierende gemacht. Sie haben uns die Uni gezeigt: die Bibliothek, die Cafeteria und die Multimedia-Räume. Hamburg habe ich dann alleine mit dem Stadtplan kennengelernt.</p>
-<p>Ich wohne mit drei anderen Studenten aus Italien, Japan und Mexiko zusammen. Immer freitags kocht einer von uns etwas aus seinem Land und wir essen zusammen, obwohl wir nur eine winzig kleine Küche haben! Ich finde das super, du weißt ja, wie gerne ich koche!</p>
-<p>Wir sprechen in der Wohnung nicht nur Deutsch, sondern oft auch Englisch miteinander. Manchmal ist das einfacher, aber mich stört das ein bisschen. Ich möchte dieses Jahr möglichst viel Deutsch lernen. Und weißt du, was mir am meisten Spaß macht? Der Literaturkurs. Der Dozent, Herr Hahn, ist ein total witziger Typ. Den müsstest du mal erleben. :-)</p>
-<p>Ich freue mich auf deinen Besuch im März. Dann zeige ich dir die Stadt und an einem Nachmittag fahren wir an die Ostsee. Da ist es total schön. Du kannst dann bei Mario schlafen. Das ist der Italiener, der neben mir wohnt. Er ist einverstanden, denn er fährt in den Ferien nach Hause, nach Genua.</p>
-<p>Schreib mir bald!<br>Bis dann<br>Gülcan</p>
-</div>`,
-        questions: [
-          { n: 11, text: 'Gülcan sagt über ihr Leben in Hamburg, dass…', choices: ['das Studium wie in ihrem Heimatland ist.', 'im Alltag einiges wie zu Hause ist.', 'im Moment vieles neu für sie ist.'], answer: 2 },
-          { n: 12, text: 'Die Studentengruppe hat…', choices: ['den Neuen die Hochschule gezeigt.', 'für neue Studenten eine Stadtführung gemacht.', 'Gülcan anderen ausländischen Studenten vorgestellt.'], answer: 0 },
-          { n: 13, text: 'In der Wohnung…', choices: ['kochen alle zusammen.', 'kocht Gülcan immer für alle.', 'kocht jeder einmal für die anderen.'], answer: 2 },
-          { n: 14, text: 'Gülcan ist es wichtig…', choices: ['auch Englisch zu üben.', 'Deutsch zu sprechen.', 'Herrn Hahn kennenzulernen.'], answer: 1 },
-          { n: 15, text: 'Im März…', choices: ['besuchen sie Mario zu Hause.', 'machen Sonja und Gülcan Urlaub am Meer.', 'übernachtet Sonja in Marios Zimmer.'], answer: 2 },
-        ]
-      },
-      // Teil 4 — Restaurant ads (6 ads, 5 matching, 1 X for no match)
-      {
-        teil: 4,
-        instruction: 'Sechs Personen suchen im Internet nach Lokalen. Welche Anzeige passt zu welcher Person? Für eine Aufgabe gibt es keine Lösung — markieren Sie X. Die Anzeige aus dem Beispiel (Mareike → d) können Sie nicht mehr wählen.',
-        text: `<div style="display:grid;gap:0.7rem;font-size:0.88rem">
-<div style="background:#fff;border:1px solid var(--line);padding:0.7rem"><b>a · www.park-cafe.de</b><br>Selbstgemachte Torten, Kuchen und italienisches Eis. Große Sonnenterrasse mit Spielplatz. Alles auch zum Mitnehmen! Täglich außer montags von 14 bis 19 Uhr geöffnet.</div>
-<div style="background:#fff;border:1px solid var(--line);padding:0.7rem"><b>b · www.feine-speisen.de</b><br>Egal, wo Sie feiern wollen, wir liefern für Ihre Hochzeit oder andere private Feiern bestes Essen. Z. B. Hochzeitsmenü ab 30 € p. P.; bayerisches Buffet 20,50 € p. P. Wir bieten außerdem Tische und Stühle, Dekoration, Servicepersonal und Kinderbetreuung an.</div>
-<div style="background:#fff;border:1px solid var(--line);padding:0.7rem"><b>c · www.weinhaus-walter.de</b><br>Internationale Spezialitäten. Beste Weine. Jetzt neu: Jeden Tag anderes 3-Gänge-Menü mit Getränk ab 20 € pro Person. Im Sommer auch in unserem ruhigen Garten. Sie finden uns direkt hinter dem Rathaus. Schöner Raum für kleine Feiern.</div>
-<div style="background:#fff;border:1px solid var(--line);padding:0.7rem;opacity:0.55"><b>d · www.cafe-sand.de</b> <span style="color:var(--muted)">(Beispiel — bereits verwendet)</span><br>Urlaub in der Stadtmitte – direkt am Fluss, täglich ab 10.00 Uhr geöffnet. Jeden Samstag und Sonntag gibt es das stadtbekannte große Frühstück. Ab Mai jeden Sonnabend Party mit Live-Musik, ab 22 Uhr.</div>
-<div style="background:#fff;border:1px solid var(--line);padding:0.7rem"><b>e · www.towabu.de</b> — <i>Spiel + Spaß bei Towabu</i><br>Auf über 2500 qm auch bei schlechtem Wetter spielen und toben! Tolle Geburtstagspartys mit Super-Programm. Getränke inklusive. Täglich 10 bis 20 Uhr. Auch in den Sommerferien geöffnet.</div>
-<div style="background:#fff;border:1px solid var(--line);padding:0.7rem"><b>f · www.hansen-im-moor.de</b> — Das Ausflugsrestaurant im Teufelsmoor<br>Mit dem Bus nur 20 Minuten vom Zentrum! Norddeutsche Küche. Mit Terrasse direkt am See. Sie suchen einen Ort für Ihr Familienfest, Ihre Hochzeit, Ihre Firmenfeier? Sprechen Sie uns an! Unsere Räume bieten Platz für 150 Personen.</div>
-</div>`,
-        matchMode: true,
-        choices: ['a', 'b', 'c', 'e', 'f', 'X'],
-        questions: [
-          { n: 16, text: 'Sarah heiratet bald und möchte mit vielen Gästen in einem Lokal feiern.', answer: 4 }, // f
-          { n: 17, text: 'Petra will mit Geschäftspartnern in der Stadt essen gehen und über die Arbeit sprechen.', answer: 2 }, // c
-          { n: 18, text: 'Jens feiert seinen Geburtstag zu Hause und möchte guten Wein anbieten.', answer: 5 }, // X
-          { n: 19, text: 'Karsten lädt am Abend Gäste zu sich nach Hause ein, möchte aber nicht kochen.', answer: 1 }, // b
-          { n: 20, text: 'Gabriele und ihre Tochter feiern Kindergeburtstag und möchten Kuchen essen gehen.', answer: 0 }, // a
-        ]
-      },
-    ],
-    hoeren: [
-      {
-        teil: 1,
-        instruction: 'Sie hören fünf kurze Texte. Sie hören jeden Text zweimal. Wählen Sie für die Aufgaben 1 bis 5 die richtige Lösung a, b oder c.',
-        audioStart: 0,
-        questions: [
-          { n: 1, text: 'Wo kann man noch parken?', choices: ['Am Bahnhof.', 'Am Einkaufszentrum.', 'Bei der Olympia-Halle.'], answer: 1 },
-          { n: 2, text: 'Was soll Sabine nicht vergessen?', choices: ['Das Geschenk.', 'Den Anzug.', 'Die Blumen.'], answer: 1 },
-          { n: 3, text: 'Wo findet das Treffen statt?', choices: ['Am Bahnhof.', 'Im Büro.', 'Im Hotel Leopold.'], answer: 2 },
-          { n: 4, text: 'Wie wird das Wetter am Sonntag?', choices: ['Im Norden trocken.', 'Im Norden und Süden nass.', 'Im Süden trocken.'], answer: 1 },
-          { n: 5, text: 'Was sollen die Hörerinnen und Hörer tun?', choices: ['Den Namen des Sängers sagen.', 'Eine Konzertkarte kaufen.', 'Ein neues Lied singen.'], answer: 0 },
-        ]
-      },
-      {
-        teil: 2,
-        instruction: 'Sie hören ein Gespräch. Sie hören den Text einmal. Was machen der Mann und die Frau in der Woche? Wählen Sie für die Aufgaben 6 bis 10 ein passendes Bild aus a bis i. Wählen Sie jeden Buchstaben nur einmal. Beispiel: Montag → f (Kino).',
-        audioStart: 407,
-        imagePool: [
-          { letter: 'a', label: 'Tanzen / Disco' },
-          { letter: 'b', label: 'Theater' },
-          { letter: 'c', label: 'Schwimmen' },
-          { letter: 'd', label: 'Konzert' },
-          { letter: 'e', label: 'Schiff / Boot' },
-          { letter: 'f', label: 'Kino (Beispiel)' },
-          { letter: 'g', label: 'Fahrrad fahren' },
-          { letter: 'h', label: 'Kochen mit Freunden' },
-          { letter: 'i', label: 'Eis essen' },
-        ],
-        matchMode: true,
-        choices: ['a', 'b', 'c', 'd', 'e', 'g', 'h', 'i'],
-        questions: [
-          { n: 6, text: '6. Dienstag', answer: 1 },  // b - Theater
-          { n: 7, text: '7. Mittwoch', answer: 5 },  // g - Fahrrad
-          { n: 8, text: '8. Donnerstag', answer: 6 }, // h - Kochen
-          { n: 9, text: '9. Freitag', answer: 3 },   // d - Konzert
-          { n: 10, text: '10. Samstag', answer: 4 }, // e - Schiff
-        ]
-      },
-      {
-        teil: 3,
-        instruction: 'Sie hören fünf kurze Gespräche. Sie hören jeden Text einmal. Wählen Sie für die Aufgaben 11 bis 15 die richtige Lösung a, b oder c.',
-        audioStart: 600,
-        questions: [
-          { n: 11, text: 'Was hat das Mädchen gestern Abend gegessen?', choices: ['Fisch.', 'Hamburger.', 'Hähnchen.'], answer: 2 },
-          { n: 12, text: 'Für welches Kleidungsstück interessiert sich die Frau?', choices: ['Die Jacke mit Buchstaben.', 'Die Jeansjacke.', 'Den blauen Mantel.'], answer: 0 },
-          { n: 13, text: 'Was fehlt für die Anmeldung?', choices: ['Das Formular.', 'Ein Foto.', 'Die Unterschrift.'], answer: 1 },
-          { n: 14, text: 'Was ist kaputt?', choices: ['Der Aufzug.', 'Die Heizung.', 'Die Lampe.'], answer: 1 },
-          { n: 15, text: 'Wohin soll der Mann gehen?', choices: ['Zur Information.', 'In den Sportraum.', 'Zum Arzt.'], answer: 1 },
-        ]
-      },
-      {
-        teil: 4,
-        instruction: 'Sie hören ein Interview. Sie hören den Text zweimal. Wählen Sie für die Aufgaben 16 bis 20 Ja oder Nein. Beispiel: 0. Sarah ist in Afrika geboren — Ja.',
-        audioStart: 760,
-        yesNoMode: true,
-        questions: [
-          { n: 16, text: 'Sarah hatte am Anfang in Deutschland Probleme.', answer: 1 }, // Nein
-          { n: 17, text: 'Ihre Geschwister haben ihr das Fußballspielen gezeigt.', answer: 0 }, // Ja
-          { n: 18, text: 'Ihr Lehrer hat ihr einen Verein empfohlen.', answer: 0 }, // Ja
-          { n: 19, text: 'Sarah hat schon bei vielen internationalen Spielen mitgespielt.', answer: 1 }, // Nein
-          { n: 20, text: 'Sie studiert jetzt Sport an der Universität.', answer: 1 }, // Nein (sie will später studieren)
-        ]
-      },
-    ],
-    schreiben: [
-      {
-        teil: 1,
-        wordCount: '20–30 Wörter',
-        prompt: 'Sie sind unterwegs in der Stadt und schreiben eine SMS an Ihre Freundin Ekaterini.',
-        bullets: [
-          'Entschuldigen Sie sich, dass Sie zu spät kommen.',
-          'Schreiben Sie, warum.',
-          'Nennen Sie einen neuen Ort und eine neue Uhrzeit für das Treffen.',
-        ],
-        model: `Hallo Ekaterini, es tut mir so leid! Ich bin im Stau und komme leider später. Können wir uns um 19 Uhr am Hauptbahnhof treffen? Bis gleich, deine [Name]`,
-      },
-      {
-        teil: 2,
-        wordCount: '30–40 Wörter',
-        prompt: 'Ihr Chef, Herr Lehmann, hat bald Geburtstag. Er hat Ihnen eine Einladung zu seiner Feier geschickt. Schreiben Sie Herrn Lehmann eine E-Mail.',
-        bullets: [
-          'Bedanken Sie sich und sagen Sie, dass Sie kommen.',
-          'Informieren Sie, dass Sie jemanden mitbringen.',
-          'Fragen Sie nach dem Weg.',
-        ],
-        model: `Sehr geehrter Herr Lehmann, vielen Dank für Ihre freundliche Einladung. Ich komme sehr gern zu Ihrer Geburtstagsfeier. Darf ich meine Frau mitbringen? Könnten Sie mir bitte den Weg zu Ihrem Haus beschreiben? Ich freue mich schon. Mit freundlichen Grüßen, [Name]`,
-      },
-    ],
-  },
-
   // ═══════════════════════════════════════════════════════════════════════
-  //  TEST 2 — Original GIRI test, written by Anup Khattri Chettri
+  //  TEST 1 — Original GIRI test, written by Anup Khattri Chettri
   //  Theme: Kathmandu / Nepal student life context (neutral A2 vocabulary)
   // ═══════════════════════════════════════════════════════════════════════
   {
     id: 'mt2',
-    title: 'Modelltest 2',
+    title: 'Modelltest 1',
     subtitle: 'GIRI Übungstest A2 — Studentenleben',
     source: 'giri',
     sourceCredit: 'GIRI Kathmandu — Original-Übungstest von Anup Khattri Chettri',
@@ -3151,12 +2954,12 @@ const MODELTESTS = [
   },
 
   // ═══════════════════════════════════════════════════════════════════════
-  //  TEST 3 — Original GIRI test, written by Anup Khattri Chettri
+  //  TEST 2 — Original GIRI test, written by Anup Khattri Chettri
   //  Theme: Daily life, work, travel (neutral A2 vocabulary)
   // ═══════════════════════════════════════════════════════════════════════
   {
     id: 'mt3',
-    title: 'Modelltest 3',
+    title: 'Modelltest 2',
     subtitle: 'GIRI Übungstest A2 — Alltag und Arbeit',
     source: 'giri',
     sourceCredit: 'GIRI Kathmandu — Original-Übungstest von Anup Khattri Chettri',
@@ -3485,8 +3288,7 @@ function loadModelTestPicker(){
     </div>
     <div class="mt-cards">${cards}</div>
     <div class="mt-attribution-box">
-      <p><b>Modelltest 1</b> ist der offizielle Modellsatz Erwachsene des Goethe-Instituts e.V., München. © Goethe-Institut 2016/2021. Quelle: <a href="https://www.goethe.de/de/spr/kup/prf/prf/gza2/inf.html" target="_blank" rel="noopener">goethe.de/a2</a>. Wir danken dem Goethe-Institut für die Möglichkeit, dieses Material kostenlos für Lernende zur Verfügung zu stellen.</p>
-      <p style="margin-top:0.6rem"><b>Modelltests 2 und 3</b> sind Original-Übungstests, geschrieben von Anup Khattri Chettri für die Studierenden des Gayatri Interdisciplinary Research Institute (GIRI), Kathmandu — im selben Format wie die echte Prüfung, aber mit eigenen Inhalten.</p>
+      <p><b>Modelltests 1 und 2</b> sind Original-Übungstests, geschrieben von Anup Khattri Chettri. Den offiziellen Modellsatz mit Audio findest du kostenlos direkt beim Herausgeber: <a href="https://www.goethe.de/de/spr/kup/prf/prf/gza2/inf.html" target="_blank" rel="noopener">goethe.de/a2</a>.</p>
     </div>
   `;
   main.querySelectorAll('.mt-card').forEach(b=>{
@@ -3587,7 +3389,7 @@ function renderLesenOrHoeren(kind){
     audioPlayer = `
       <div class="mt-audio-player">
         <div class="mt-audio-label">📖 LESEN STATT HÖREN</div>
-        <p style="font-size:0.92rem;line-height:1.5;color:var(--ink-soft);margin:0.5rem 0">Dieser GIRI-Übungstest hat kein Audio — Hörtexte stehen als Lesetexte zum Üben. So kannst du den Wortschatz und das Aufgabenformat trainieren. Für echtes Hörtraining nutze Modelltest 1 (Goethe Original).</p>
+        <p style="font-size:0.92rem;line-height:1.5;color:var(--ink-soft);margin:0.5rem 0">Dieser GIRI-Übungstest hat kein Audio — Hörtexte stehen als Lesetexte zum Üben. So kannst du den Wortschatz und das Aufgabenformat trainieren. Für echtes Hörtraining nutze den offiziellen Modellsatz mit Audio auf goethe.de.</p>
       </div>
     `;
   }
